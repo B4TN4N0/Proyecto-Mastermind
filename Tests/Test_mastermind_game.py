@@ -26,7 +26,9 @@ def test_tamaño_poblacion_inicial(first_population):
 @pytest.mark.population
 def test_tamaño_genoma_poblacion_inicial(first_population):
     for individual in first_population:
-        assert len(individual) == 4
+        assert len(individual) == 4 (
+            f"ERROR: El individuo {individual} no tiene el tamaño correcto de 4 genes."
+        )
 
 # ------------------------------------------------------------------ #
 
@@ -36,7 +38,11 @@ def test_tamaño_genoma_poblacion_inicial(first_population):
 def test_colores_validos_poblacion_inicial(first_population,color_genes):
     for gen in first_population:
         for value in gen:
-            assert value in color_genes
+            assert value in color_genes (
+             f"ERROR: El color {value} no es válido. Los colores permitidos son: {color_genes()}" 
+             )
+            
+
 
 # ------------------------------------------------------------------ #
 
@@ -45,8 +51,6 @@ def test_colores_validos_poblacion_inicial(first_population,color_genes):
 
 @pytest.mark.population
 def test_colores_repetidos_dentro_individuo(first_population):
-    import pytest
-
     TAMAÑO_POBLACION = len(first_population)
     repeticiones_encontradas = 0
     for individuo in first_population:
