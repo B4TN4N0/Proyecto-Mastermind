@@ -40,16 +40,28 @@ def test_colores_validos_poblacion_inicial(first_population,color_genes):
 
 # ------------------------------------------------------------------ #
 
-# Este test comprueba que puedan existir convinaciones con colores repetidos #
+# Este test comprueba que si puedan existir convinaciones con los  colores permitidos repetidos en el mismo individuo 
+# ejemplo [RED , GREEN , RED , BLUE]#
 
 @pytest.mark.population
-def test_genes_repetidos_en_misma_cadena(first_population,color_genes):
-    assert first_population == ['Rojo','Azul','Rosa','Blanco']
-    assert first_population == ['Rojo','Rojo','Azul','Naranja']
-    assert first_population == ['Rojo','Rojo','Rojo','Verde']
-    assert first_population == ['verde','verde','Rojo','Rojo']
-    assert first_population == ['Rojo','Blanco','Blanco','Rojo']
-    assert first_population == ['Rojo','Blanco','Azul','Azul']
-   
+def test_colores_repetidos_dentro_individuo(first_population):
+    import pytest
+
+    TAMAÑO_POBLACION = len(first_population)
+    repeticiones_encontradas = 0
+    for individuo in first_population:
+        colores_unicos = set(individuo)
+        
+        if len(colores_unicos) < len(individuo):
+            repeticiones_encontradas += 1
+ 
+    UMBRAL_MINIMO_REPETICIONES = max(1, int(TAMAÑO_POBLACION * 0.05)) # Al menos un 5% de la población debe tener colores repetidos
+    
+    assert repeticiones_encontradas >= UMBRAL_MINIMO_REPETICIONES, (
+        f"ERROR: De {TAMAÑO_POBLACION} códigos generados, solo {repeticiones_encontradas} contenían colores repetidos. " 
+        f"Se esperaba un mínimo de {UMBRAL_MINIMO_REPETICIONES}. La función 'first_population' puede haber sido cambiada "
+        f"accidentalmente a un método sin reemplazo (como random.sample)."
+    )
+
 
 # =========================================================================== #
