@@ -1,4 +1,6 @@
-from algorithm_parameters import COLOR_GENES, GENOME_LENGTH
+import sys
+sys.path.append("..")  
+from src.algorithm_parameters import COLOR_GENES, GENOME_LENGTH
     
 # Instrucciones para el usuario #
 
@@ -16,7 +18,7 @@ def get_secret_code_from_user():
     while True:
         try:
             user_input = input(
-                f"porfavor ingrese su codigo d¡secreto de {GENOME_LENGTH} digitos (ejemplo: 1 2 3 4): se permiten colores repetidos")
+                f"porfavor ingrese su codigo secreto de {GENOME_LENGTH} digitos (ejemplo: 1 2 3 4): se permiten colores repetidos: ")
             user_choices = [int(gen)for gen in user_input.split()]
 # Validar la entrada del usuario #
         except ValueError:
@@ -34,6 +36,6 @@ def get_secret_code_from_user():
         secret_code = [COLOR_GENES[gen-1] for gen in user_choices]
         return secret_code
 
-
-       
+codigo_secreto = get_secret_code_from_user()
+print(f"Tu código secreto es: {codigo_secreto}")
 
