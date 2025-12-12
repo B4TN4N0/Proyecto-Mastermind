@@ -1,6 +1,3 @@
-def main():
-    print("Hello from proyecto-mastermind!")
-
-
-if __name__ == "__main__":
-    main()
+ 
+from src.algorithm_parameters import *
+from src.User_Imput_secret_code import *
