@@ -1,7 +1,4 @@
-COLOR_GENES = ['Red', 'Green', 'Blue', 'Purple', 'Yellow', 'White', 'Pink', 'Orange']
-GENOME_LENGTH = 4
-POPULATION_SIZE = 100
-
+from src.algorithm_parameters import COLOR_GENES, GENOME_LENGTH, POPULATION_SIZE
 import random
 def first_population():
     first_population = []
