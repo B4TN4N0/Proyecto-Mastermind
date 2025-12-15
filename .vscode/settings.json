@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "Actualizar casos test"
+        "Actualizar casos test",
+        "Añadir casos test "
     ]
 }
