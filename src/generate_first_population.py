@@ -1,3 +1,5 @@
+import sys
+sys.path.append("..")
 from src.algorithm_parameters import COLOR_GENES, GENOME_LENGTH, POPULATION_SIZE
 import random
 def first_population():
@@ -6,4 +8,3 @@ def first_population():
         gen_combination = random.choices(COLOR_GENES, k=GENOME_LENGTH)
         first_population.append(gen_combination)
     return first_population
-print (first_population())

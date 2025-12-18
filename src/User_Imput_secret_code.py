@@ -36,6 +36,6 @@ def get_secret_code_from_user():
         secret_code = [COLOR_GENES[gen-1] for gen in user_choices]
         return secret_code
 
-codigo_secreto = get_secret_code_from_user()
-print(f"Tu código secreto es: {codigo_secreto}")
+secret_code_list = get_secret_code_from_user()
+print(f"Tu código secreto es: {secret_code_list}")
 
