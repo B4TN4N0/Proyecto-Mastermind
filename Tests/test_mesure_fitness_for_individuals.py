@@ -51,4 +51,14 @@ def test_mesure_individual_fitness_three_black_one_white_pegs():
     solution = ['Red', 'Blue', 'Green', 'Purple']
     fitness = mesure_individual_fitness(individual, solution)
     assert fitness == 6, "La aptitud debe ser 6 para tres coincidencias de color y posición y una coincidencia de color"
-
+# ESTE TEST COMPROBARÁ QUE LA MEDICIÓN DE APTITUD DEVUELVE 5 PARA DOS COINCIDENCIAS DE COLOR Y POSICIÓN Y DOS COINCIDENCIAS DE COLOR
+@pytest.mark.fitness
+def test_mesure_individual_fitness_two_black_two_white_pegs():
+    individual = ['Red', 'Blue', 'Green', 'Yellow']
+    solution = ['Red', 'Blue', 'Yellow', 'Green']
+    fitness = mesure_individual_fitness(individual, solution)
+    assert fitness == 6, "La aptitud debe ser 6 para dos coincidencias de color y posición y dos coincidencias de color"
+    
+#========================================================================== #
+# ========================= FIN DE LOS TESTS ============================== #
+# ========================================================================== #
