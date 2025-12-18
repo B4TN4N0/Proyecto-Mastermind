@@ -2,3 +2,5 @@
 .venv/
 #IGNORAR EL .VSCODE
 .vscode/
+uv.lock
+sttings.json
