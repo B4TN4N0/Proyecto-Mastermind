@@ -6,4 +6,3 @@ def first_population():
         gen_combination = random.choices(COLOR_GENES, k=GENOME_LENGTH)
         first_population.append(gen_combination)
     return first_population
-print (first_population())

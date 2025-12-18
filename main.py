@@ -8,7 +8,6 @@ def main():
     population = first_population()
     solution = get_secret_code_from_user()
     fitness = mesure_population_fitness(population, solution)
-    print(fitness)
 
 if __name__ == "__main__":
     main()
