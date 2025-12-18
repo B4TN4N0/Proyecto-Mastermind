@@ -58,7 +58,7 @@ def test_mesure_individual_fitness_two_black_two_white_pegs():
     solution = ['Red', 'Blue', 'Yellow', 'Green']
     fitness = mesure_individual_fitness(individual, solution)
     assert fitness == 6, "La aptitud debe ser 6 para dos coincidencias de color y posición y dos coincidencias de color"
-    
+
 #========================================================================== #
 # ========================= FIN DE LOS TESTS ============================== #
 # ========================================================================== #
