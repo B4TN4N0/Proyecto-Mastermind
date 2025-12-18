@@ -1,2 +1,4 @@
 # IGNORAR EL ENTORNO VIRTUAL
 .venv/
+#IGNORAR EL .VSCODE
+.vscode/
