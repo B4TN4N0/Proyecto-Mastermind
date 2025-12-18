@@ -7,9 +7,8 @@ from src.User_Imput_secret_code import secret_code_list
 population = first_population()
 solution = secret_code_list
 # definimos valores para los pegs
-BLACK_PEG_VALUE = 3 
-WHITE_PEG_VALUE = 2
-NO_PEG_VALUE = 1  # <--- valor para cuando no coincide nada
+BLACK_PEG_VALUE = 2 
+WHITE_PEG_VALUE = 1 
 REVISED_GEN = None
 # funcion para medir la aptitud de un individuo
 def mesure_individual_fitness(individual, solution):
@@ -37,10 +36,12 @@ def mesure_individual_fitness(individual, solution):
 
             except ValueError:
                 pass
-# contamos los no pegs cuando no coinciden los colores ni posiciones 
-    no_pegs = len(solution) - (black_pegs + white_pegs)
+# asignamos un valor mínimo para cuando que cuando no haya aciertos se puedan reproducir
+    no_pegs = 0
+    if black_pegs == 0 and white_pegs == 0:
+        no_pegs = 1
 
-    fitness_value = (black_pegs * BLACK_PEG_VALUE) + (white_pegs * WHITE_PEG_VALUE) + (no_pegs * NO_PEG_VALUE)
+    fitness_value = black_pegs * BLACK_PEG_VALUE + white_pegs * WHITE_PEG_VALUE + no_pegs
     
     return fitness_value
 # funcion para medir la aptitud de toda la poblacion
