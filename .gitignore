@@ -3,4 +3,4 @@
 #IGNORAR EL .VSCODE
 .vscode/
 uv.lock
-sttings.json
+.vscode/settings.json
