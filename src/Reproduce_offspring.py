@@ -22,3 +22,8 @@ def reproduce_offspring(selected_parents):
             offspring_population.append(offspring2)
             
     return offspring_population
+# crear una nueva generación de individuos donde estan los hijos generados a partir de los padres seleccionados + los padres seleccionados
+def create_new_generation(selected_parents, offspring_population):
+    # Combinar padres e hijos
+    new_generation = selected_parents + offspring_population
+    return new_generation
