@@ -1,10 +1,10 @@
 import pytest
 import random
-from your_module import mutate, reproduce_offspring, run_evolution
+from src.Reproduce_offspring import mutate, reproduce_offspring, run_evolution
 
 # --- Mock de dependencias si fuera necesario, o imports reales ---
 # Asumiendo que las funciones están en el scope o importadas correctamente
-
+@pytest.mark.generation
 def test_mutate_changes_individual():
     """Verifica que la mutación realmente altere el individuo"""
     individual = [1, 1, 1, 1]
@@ -15,7 +15,7 @@ def test_mutate_changes_individual():
     # Existe una probabilidad astronómicamente baja de que elija el mismo color,
     # pero en un test controlado debería cambiar al menos un gen.
     assert mutated != individual or 1.0 == 1.0 
-
+@pytest.mark.generation
 def test_reproduce_offspring_length():
     """Verifica que la cantidad de hijos sea igual a la de padres seleccionados"""
     # Simulamos población evaluada: [(adn, fitness), ...]
@@ -26,7 +26,7 @@ def test_reproduce_offspring_length():
     # Si entran 4 individuos (2 parejas), deben salir 4 hijos
     assert len(offspring) == len(population)
     assert isinstance(offspring[0], list)
-
+@pytest.mark.generation
 def test_crossover_logic():
     """Verifica que los hijos hereden partes de los padres"""
     # Desactivamos mutación para este test para ver el cruce puro
@@ -40,7 +40,7 @@ def test_crossover_logic():
     
     assert hijo1 == [1, 1, 8, 8]
     assert hijo2 == [8, 8, 1, 1]
-
+@pytest.mark.generation
 def test_run_evolution_convergence():
     """Test de integración: ¿Encuentra una solución simple?"""
     solution = [1, 2, 3, 4]
