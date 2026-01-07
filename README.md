@@ -1,8 +1,8 @@
-# 🚀 Mastermind GA: Genetic Algorithm Solver #
+#  Mastermind GA: Genetic Algorithm Solver #
 ---
 
 
-## 📖 Tabla de Contenidos ##
+##  Tabla de Contenidos ##
 [Descripción General](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
 
 [Arquitectura del Sistema](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
@@ -17,7 +17,7 @@
 
 [Análisis de Resultados](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
 ---
-## 🎮 Sobre el Juego ##
+##  Sobre el Juego ##
 Mastermind es un juego de lógica donde un "Creador de Código" (el usuario) elige una combinación secreta, y un "Descifrador" (la IA) intenta adivinarla. En cada intento, el sistema proporciona pistas:
 
 Puntos Negros: Colores correctos en la posición correcta.
@@ -25,7 +25,7 @@ Puntos Negros: Colores correctos en la posición correcta.
 Puntos Blancos: Colores correctos en la posición incorrecta.
 --- 
 
-## 🛠️ Características Técnicas ##
+##  Características Técnicas ##
 
 El núcleo de este proyecto reside en su Algoritmo Genético, configurado con los siguientes parámetros técnicos:
 | Parámetro | Valor | Descripción |
@@ -52,7 +52,7 @@ Esferas de color: Representadas por bloques sólidos de alta visibilidad.
 Tablero: Diseño estructurado con marcos y numeración de intentos.
 ---
 
-## 📂 Estructura del Proyecto ##
+##  Estructura del Proyecto ##
 ![alt text](image.png)
 ---
 ## Instalación y Uso ##
@@ -74,7 +74,7 @@ Bash
 
 python main.py
 ---
-📖 Instrucciones de Juego
+ Instrucciones de Juego
 Al iniciar, verás el Menú de Colores disponibles (8 opciones).
 
 El sistema te pedirá ingresar tu Código Secreto de 4 dígitos (ej: 1 2 5 8).
