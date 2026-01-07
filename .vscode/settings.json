@@ -3,7 +3,8 @@
         "Actualizar casos test",
         "Refactorizar  codigo de importacion",
         "añadir generador de nueva poblacion",
-        "Nuevos casos test"
+        "Nuevos casos test",
+        "Añadir documentacion"
     ],
     "python.testing.pytestArgs": [
         "Tests"
