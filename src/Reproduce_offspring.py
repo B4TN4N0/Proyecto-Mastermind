@@ -1,29 +1,40 @@
 import random
+from src.select_parents import select_parents
+from src.Mesure_fitnes_for_individuals import mesure_population_fitness
 
-def reproduce_offspring(selected_parents):
-    offspring_population = []
+# ... (Aquí iría tu función reproduce_offspring ya definida)
+
+def run_evolution(initial_population, solution, max_generations=100):
+    """
+    Ejecuta el bucle de generaciones.
+    """
+    # 1. Evaluación inicial de la población
+    current_pop_with_fitness = mesure_population_fitness(initial_population, solution)
     
-    # Recorremos la lista de dos en dos (paso de 2)
-    for i in range(0, len(selected_parents), 2):
-        # Aseguramos que haya un par disponible
-        if i + 1 < len(selected_parents):
-            parent1 = selected_parents[i]
-            parent2 = selected_parents[i+1]
-            
-            # Punto de cruce (Single Point Crossover)
-            cut_point = random.randint(1, len(parent1) - 1)
-            
-            # Creación de los dos hijos
-            offspring1 = parent1[:cut_point] + parent2[cut_point:]
-            offspring2 = parent2[:cut_point] + parent1[cut_point:]
-            
-            # Los añadimos a la nueva lista
-            offspring_population.append(offspring1)
-            offspring_population.append(offspring2)
-            
-    return offspring_population
-# crear una nueva generación de individuos donde estan los hijos generados a partir de los padres seleccionados + los padres seleccionados
-def create_new_generation(selected_parents, offspring_population):
-    # Combinar padres e hijos
-    new_generation = selected_parents + offspring_population
-    return new_generation
+    for gen in range(max_generations):
+        # Mostramos el mejor fitness de la generación actual para seguimiento
+        best_individual = max(current_pop_with_fitness, key=lambda x: x[1])
+        print(f"Generación {gen}: Mejor fitness = {best_individual[1]}")
+
+        # Si encontramos la solución perfecta, detenemos el bucle
+        # (Ajusta el valor 10 según el puntaje máximo de tu fitness)
+        if best_individual[1] >= 10: 
+            print("¡Solución encontrada!")
+            break
+
+        # --- EL BUCLE DE GENERACIÓN ---
+        
+        # 2. Generamos los hijos (ADN)
+        offspring_dna = reproduce_offspring(current_pop_with_fitness)
+        
+        # 3. Evaluamos a los hijos
+        offspring_with_fitness = mesure_population_fitness(offspring_dna, solution)
+        
+        # 4. Creamos el pool total (Padres + Hijos)
+        total_pool = current_pop_with_fitness + offspring_with_fitness
+        
+        # 5. PASO POR SELECT_PARENTS (Ruleta de supervivencia)
+        # Esto genera la población que entrará en la SIGUIENTE iteración del bucle
+        current_pop_with_fitness = select_parents(total_pool)
+
+    return current_pop_with_fitness
