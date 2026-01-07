@@ -2,7 +2,8 @@
     "conventionalCommits.scopes": [
         "Actualizar casos test",
         "Refactorizar  codigo de importacion",
-        "añadir generador de nueva poblacion"
+        "añadir generador de nueva poblacion",
+        "Nuevos casos test"
     ],
     "python.testing.pytestArgs": [
         "Tests"
