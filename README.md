@@ -67,14 +67,17 @@ Clona el repositorio:
 Bash
 
 git clone https://github.com/B4TN4N0/Proyecto-Mastermind.git
+
 cd mastermind-ga
+
 Ejecuta el juego:
 
 Bash
 
 python main.py
 ---
- Instrucciones de Juego
+ 
+## Instrucciones de Juego ##
 Al iniciar, verás el Menú de Colores disponibles (8 opciones).
 
 El sistema te pedirá ingresar tu Código Secreto de 4 dígitos (ej: 1 2 5 8).
@@ -83,7 +86,7 @@ Una vez establecido, el Algoritmo Genético comenzará su proceso de evolución.
 
 Observa cómo cada generación se acerca más a tu código hasta lograr el "Match" perfecto.
 ---
-## 🛠️ Posibles Mejoras (Roadmap) ##
+## Posibles Mejoras (Roadmap) ##
 [ ] Implementar el algoritmo de Donald Knuth para comparar eficiencia contra el GA.
 
 [ ] Exportación de estadísticas de convergencia a archivos .csv.
