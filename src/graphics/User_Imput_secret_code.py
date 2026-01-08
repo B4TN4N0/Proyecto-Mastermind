@@ -1,5 +1,6 @@
 import sys
-
+sys.path.append("..")
+sys.path.append("..")
 from src.algorithm_parameters import COLOR_GENES, GENOME_LENGTH, COLORS_ANSI
 
 def display_color_menu():
@@ -34,15 +35,3 @@ def get_secret_code_from_user():
             continue
 
         return [COLOR_GENES[gen - 1] for gen in user_choices]
-
-def main():
-    codigo_secreto = get_secret_code_from_user()
-
-    # Formatear la salida final para que se vea con colores
-    visual_code = " ".join([COLORS_ANSI[color] for color in codigo_secreto])
-
-    print(f"\n✅ Tu código secreto guardado es: {codigo_secreto}")
-    print(f"Representación visual: {visual_code}")
-
-if __name__ == "__main__":
-    main()

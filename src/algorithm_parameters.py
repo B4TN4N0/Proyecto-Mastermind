@@ -14,10 +14,6 @@ COLORS_ANSI = {
     'Orange': '\033[48;5;208m  \033[0m',
 }
 
-def colorize_dna(dna_list):
-    """Convierte una lista de nombres de colores en bloques visuales."""
-    return " ".join([COLORS_ANSI.get(color, "[?]") for color in dna_list])
-
 # Parámetros del Algoritmo Genético
 POPULATION_SIZE = 100
 MUTATION_RATE = 0.05
