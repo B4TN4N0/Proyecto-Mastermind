@@ -7,7 +7,8 @@
         "Añadir documentacion",
         "Refactorizar Código",
         "Agregar Colores",
-        "Añadir archivos de memoria"
+        "Añadir archivos de memoria",
+        "Arreglar Código"
     ],
     "python.testing.pytestArgs": [
         "Tests"
