@@ -4,7 +4,10 @@
         "Refactorizar  codigo de importacion",
         "añadir generador de nueva poblacion",
         "Nuevos casos test",
-        "Añadir documentacion"
+        "Añadir documentacion",
+        "Refactorizar Código",
+        "Agregar Colores",
+        "Añadir archivos de memoria"
     ],
     "python.testing.pytestArgs": [
         "Tests"
