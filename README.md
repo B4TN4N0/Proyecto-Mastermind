@@ -1,8 +1,7 @@
-#  Mastermind GA: Genetic Algorithm Solver #
+# Mastermind GA: Genetic Algorithm Solver #
 ---
 
-
-##  Tabla de Contenidos ##
+## Tabla de Contenidos ##
 [Descripción General](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
 
 [Arquitectura del Sistema](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
@@ -16,16 +15,28 @@
 [Instalación y Uso](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
 
 [Análisis de Resultados](https://github.com/B4TN4N0/Proyecto-Mastermind.git)
+
 ---
-##  Sobre el Juego ##
+## Sobre el Juego ##
 Mastermind es un juego de lógica donde un "Creador de Código" (el usuario) elige una combinación secreta, y un "Descifrador" (la IA) intenta adivinarla. En cada intento, el sistema proporciona pistas:
 
 Puntos Negros: Colores correctos en la posición correcta.
 
 Puntos Blancos: Colores correctos en la posición incorrecta.
+
 --- 
 
-##  Características Técnicas ##
+## Instrucciones de Juego ##
+Al iniciar, verás el Menú de Colores disponibles (8 opciones).
+
+El sistema te pedirá ingresar tu Código Secreto de 4 dígitos (ej: 1 2 5 8).
+
+Una vez establecido, el Algoritmo Genético comenzará su proceso de evolución.
+
+Observa cómo cada generación se acerca más a tu código hasta lograr el "Match" perfecto.
+
+---
+## Características Técnicas ##
 
 El núcleo de este proyecto reside en su Algoritmo Genético, configurado con los siguientes parámetros técnicos:
 | Parámetro | Valor | Descripción |
@@ -42,6 +53,7 @@ El núcleo de este proyecto reside en su Algoritmo Genético, configurado con lo
 [Crossover](https://github.com/B4TN4N0/Proyecto-Mastermind/blob/cbe21fc17277f657d6bf6c1810124639a88cc8d1/src/Reproduce_offspring.py): Combinación de ADN de los mejores "padres" para generar descendencia.
 
 [Mutación](https://github.com/B4TN4N0/Proyecto-Mastermind/blob/cbe21fc17277f657d6bf6c1810124639a88cc8d1/src/algorithm_parameters.py): Introducción de variabilidad para evitar máximos locales.
+
 --- 
 
 Interfaz Visual
@@ -50,42 +62,68 @@ Inspirado en las versiones clásicas de aplicaciones móviles, la interfaz de co
 Esferas de color: Representadas por bloques sólidos de alta visibilidad.
 
 Tablero: Diseño estructurado con marcos y numeración de intentos.
+
 ---
 
-##  Estructura del Proyecto ##
+## Estructura del Proyecto ##
 ![alt text](image.png)
+
 ---
-## Instalación y Uso ##
-Requisitos previos
+# Instalación y Uso #
+## Requisitos previos ##
+
 Python 3.11 o superior.
 
-Una terminal compatible con colores  (Terminal de Linux, PowerShell o CMD moderno en Win10/11).
+Terminal compatible con colores: Terminal de Linux, PowerShell o CMD moderno (Win 10/11).
 
-Ejecución
-Clona el repositorio:
+Configuración del entorno
 
+Es recomendable usar un entorno virtual para mantener las dependencias aisladas:
 Bash
 
+## Clonar el repositorio ##
 git clone https://github.com/B4TN4N0/Proyecto-Mastermind.git
-
 cd mastermind-ga
 
-Ejecuta el juego:
+## Crear y activar entorno virtual ##
+python -m venv venv
 
-Bash
+source venv/bin/activate 
 
-python main.py
+En Windows: venv\Scripts\activate
+
+## Configuración del Proyecto ##
+
+El proyecto utiliza un archivo pyproject.toml para gestionar las dependencias de forma robusta.
+
+## Instalación de dependencias ##
+
+Para usuarios (solo jugar): Necesitarás las librerías base (como matplotlib para la interfaz gráfica ):
+
+pip install .
+
+Para desarrolladores (testing): Para instalar las herramientas de desarrollo como pytest y pytest-sugar:
+
+pip install ".[dev]"
+
+🧪 Pruebas Unitarias (Desarrollo)
+
+Gracias a pytest-sugar, la ejecución de pruebas es visual y limpia.
+
+# Ejecutar todos los tests
+
+pytest
+
 ---
- 
-## Instrucciones de Juego ##
-Al iniciar, verás el Menú de Colores disponibles (8 opciones).
+## Tiempo invertido ##
 
-El sistema te pedirá ingresar tu Código Secreto de 4 dígitos (ej: 1 2 5 8).
+La inversion en tiempo para el proyecto fue de aproximadamente unas 21 horas con 40 minutos Adjunto una grafica de tiempo dedicado a cada modulo.
 
-Una vez establecido, el Algoritmo Genético comenzará su proceso de evolución.
+![alt text](<horas.png>)
 
-Observa cómo cada generación se acerca más a tu código hasta lograr el "Match" perfecto.
 ---
+
+
 ## Posibles Mejoras (Roadmap) ##
 [ ] Implementar el algoritmo de Donald Knuth para comparar eficiencia contra el GA.
 
@@ -93,4 +131,4 @@ Observa cómo cada generación se acerca más a tu código hasta lograr el "Matc
 
 [ ] Interfaz gráfica de usuario (GUI) utilizando Tkinter o PyQt.
 
-Desarrollado por: [Óscar Fernández Millan  y Joaquín Fernández García]
+Desarrollado por: [Óscar Fernández Millan y Joaquín Fernández García]
