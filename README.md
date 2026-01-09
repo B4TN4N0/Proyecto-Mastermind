@@ -68,6 +68,37 @@ Tablero: Diseño estructurado con marcos y numeración de intentos.
 ## Estructura del Proyecto ##
 ![alt text](image.png)
 
+
+## Estructura de Ramas ##
+
+Para mantener un historial limpio y organizado, el proyecto utiliza un modelo de ramificación basado en cuatro niveles de jerarquía:
+1. Rama main (Producción)
+
+    Es la rama principal del proyecto.
+
+    Solo contiene código estable y probado.
+
+    No se trabaja directamente sobre ella. Solo recibe merges de develop cuando se alcanza un hito importante.
+
+2. Rama develop (Integración)
+
+    Es nuestra rama de trabajo diario y base para todas las nuevas funcionalidades.
+
+    Aquí se integran los cambios terminados de cada miembro del equipo.
+
+    Regla: Antes de subir nada aquí, el código debe pasar los tests (TDD).
+
+3. Ramas Personales (Features)
+
+Cada miembro del grupo dispone de una rama propia para desarrollar sus tareas asignadas sin interferir en el trabajo de los demás:
+
+    imp_joaquin: Implementaciones y experimentos de Joaquín.
+
+    imp_oscar: Implementaciones y experimentos de Oscar.
+
+![alt text](Tree.png)
+
+
 ---
 # Instalación y Uso #
 ## Requisitos previos ##
