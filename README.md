@@ -159,25 +159,25 @@ La inversion en tiempo para el proyecto fue de aproximadamente unas 21 horas con
 En este proyecto, integramos herramientas de IA (como GitHub Copilot, ChatGPT o Gemini) como un socio de pensamiento, no como un sustituto del criterio técnico.
  ## IA como Asistente de Diseño ##
 
-    Usamos la IA para explorar arquitecturas, comparar bibliotecas o entender conceptos complejos acerca de los algoritmos necesarios.
+Usamos la IA para explorar arquitecturas, comparar bibliotecas o entender conceptos complejos acerca de los algoritmos necesarios.
 
-    Validación Humana: Ninguna sugerencia de la IA se acepta sin una revisión crítica por parte del equipo.
+Validación Humana: Ninguna sugerencia de la IA se acepta sin una revisión crítica por parte del equipo.
 
- ## IA en el Desarrollo (TDD y SRP) ##
+## IA en el Desarrollo (TDD y SRP) ##
 
-    TDD Primero: No pedimos a la IA que escriba funciones desde cero. Primero escribimos nuestro test  y luego usamos la IA para sugerir seudocodigo que cumplan con ese test .
+TDD Primero: No pedimos a la IA que escriba funciones desde cero. Primero escribimos nuestro test  y luego usamos la IA para sugerir seudocodigo que cumplan con ese test .
 
-    Cumplimiento de SRP: Si la IA genera un bloque de código demasiado extenso, es responsabilidad del desarrollador refactorizarlo en piezas pequeñas con una única responsabilidad.
+Cumplimiento de SRP: Si la IA genera un bloque de código demasiado extenso, es responsabilidad del desarrollador refactorizarlo en piezas pequeñas con una única responsabilidad.
 
 ## Mejora Continua de la Documentación (README) ##
 
 Utilizamos la IA de forma activa para elevar la calidad de nuestra documentación técnica:
 
-    Claridad y Estilo: Usamos prompts para mejorar la redacción de este README, asegurando que sea profesional, escalable y fácil de entender para no integrantes.
+Claridad y Estilo: Usamos prompts para mejorar la redacción de este README, asegurando que sea profesional, escalable y fácil de entender para no integrantes.
 
-    Generación de Diagramas: Apoyamos la creación de esquemas y tablas explicativas que faciliten la comprensión del flujo de trabajo.
+Generación de Diagramas: Apoyamos la creación de esquemas y tablas explicativas que faciliten la comprensión del flujo de trabajo.
 
-
+---
 
 ## Posibles Mejoras (Roadmap) ##
 [ ] Implementar el algoritmo de Donald Knuth para comparar eficiencia contra el GA.
