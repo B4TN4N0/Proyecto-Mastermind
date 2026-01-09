@@ -2,7 +2,7 @@ import sys
 sys.path.append("..")
 sys.path.append("..")
 from src.algorithm_parameters import COLOR_GENES, GENOME_LENGTH, COLORS_ANSI
-
+from src.graphics.colorize_dna import colorize_color
 def display_color_menu():
     print("\n" + "="*43)
     print("      BIENVENIDO AL JUEGO MASTERMIND")
@@ -10,7 +10,7 @@ def display_color_menu():
     print("Menú de colores disponibles:")
     for id_gen, gen in enumerate(COLOR_GENES):
         # Mostramos el número, el cuadro de color y el nombre
-        color_box = COLORS_ANSI.get(gen, "[ ]")
+        color_box = colorize_color(gen, "[ ]")
         print(f"{id_gen + 1}. {color_box} {gen}")
     print("-" * 43)
 
