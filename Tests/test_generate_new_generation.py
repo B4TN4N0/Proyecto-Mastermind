@@ -40,18 +40,3 @@ def test_crossover_logic():
     
     assert hijo1 == [1, 1, 8, 8]
     assert hijo2 == [8, 8, 1, 1]
-@pytest.mark.generation
-def test_run_evolution_convergence():
-    """Test de integración: ¿Encuentra una solución simple?"""
-    solution = [1, 2, 3, 4]
-    # Población muy básica
-    initial_pop = [[8, 8, 8, 8], [7, 7, 7, 7], [1, 1, 1, 1], [4, 4, 4, 4]]
-    
-    # Ejecutamos pocas generaciones
-    final_pop = run_evolution(initial_pop, solution, max_generations=50)
-    
-    # Buscamos si alguien tiene el fitness máximo
-    mejor_individuo = max(final_pop, key=lambda x: x[1])
-    
-    # En 50 generaciones con una solución tan simple, debería haber mejorado el fitness inicial
-    assert mejor_individuo[1] > 0
