@@ -2,7 +2,7 @@ import sys
 sys.path.append("..")
 sys.path.append("..")
 from src.algorithm_parameters import COLOR_GENES, GENOME_LENGTH, COLORS_ANSI
-from src.graphics.colorize_dna import colorize_color
+from src.graphics.colorize import colorize_color
 def display_color_menu():
     print("\n" + "="*43)
     print("      BIENVENIDO AL JUEGO MASTERMIND")

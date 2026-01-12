@@ -4,7 +4,7 @@ from src.generate_first_population import first_population
 from src.graphics.User_Imput_secret_code import get_secret_code_from_user
 from src.Mesure_fitnes_for_individuals import *
 from src.select_parents import select_parents
-from src.graphics.colorize_dna import colorize_dna
+from src.graphics.colorize import colorize_dna
 
 # Importamos la función de reproducción que definiste antes
 # Asegúrate de que esté en un archivo llamado src/reproduce.py o similar
@@ -30,7 +30,7 @@ def main():
         # Formateamos el ADN del mejor individuo con colores
         visual_dna = " ".join(colorize_dna(best_individual[0]))
 
-        print(f"Generación {generation} | Mejor Fitness: {best_individual[1]} | ADN: {visual_dna} | {black_pegs} | {white_pegs}")
+        print(f"Generación {generation} | Mejor Fitness: {best_individual[1]} | ADN: {visual_dna} | {black_pegs} ○ | {white_pegs} ●")
 
         # Si el fitness es el máximo
         if best_individual[0] == solution:
