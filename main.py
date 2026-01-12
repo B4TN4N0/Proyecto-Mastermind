@@ -5,9 +5,6 @@ from src.graphics.User_Imput_secret_code import get_secret_code_from_user
 from src.Mesure_fitnes_for_individuals import *
 from src.select_parents import select_parents
 from src.graphics.colorize import colorize_dna
-
-# Importamos la función de reproducción que definiste antes
-# Asegúrate de que esté en un archivo llamado src/reproduce.py o similar
 from src.Reproduce_offspring import reproduce_offspring
 
 def main():
