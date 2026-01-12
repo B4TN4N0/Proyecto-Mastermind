@@ -2,7 +2,7 @@ import random
 from src.algorithm_parameters import *
 from src.generate_first_population import first_population
 from src.graphics.User_Imput_secret_code import get_secret_code_from_user
-from src.Mesure_fitnes_for_individuals import mesure_population_fitness
+from src.Mesure_fitnes_for_individuals import *
 from src.select_parents import select_parents
 from src.graphics.colorize_dna import colorize_dna
 
@@ -26,11 +26,11 @@ def main():
         # --- PROGRESO ---
         # Buscamos al mejor individuo actual
         best_individual = max(population_with_fitness, key=lambda x: x[1])
-
+        black_pegs, white_pegs = mesure_black_and_white_pegs(best_individual[0], solution)
         # Formateamos el ADN del mejor individuo con colores
         visual_dna = " ".join(colorize_dna(best_individual[0]))
 
-        print(f"Generación {generation} | Mejor Fitness: {best_individual[1]} | ADN: {visual_dna}")
+        print(f"Generación {generation} | Mejor Fitness: {best_individual[1]} | ADN: {visual_dna} | {black_pegs} | {white_pegs}")
 
         # Si el fitness es el máximo
         if best_individual[0] == solution:

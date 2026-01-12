@@ -9,7 +9,7 @@ REVISED_GEN = None
 
 # ==================== FITNESS INDIVIDUAL ==================== #
 
-def mesure_individual_fitness(individual, solution):
+def mesure_black_and_white_pegs(individual, solution):
     solution_temp = list(solution)
     individual_temp = list(individual)
 
@@ -32,11 +32,17 @@ def mesure_individual_fitness(individual, solution):
             except ValueError:
                 pass
 
+    return black_pegs, white_pegs
+
+def mesure_individual_fitness(individual, solution):
+
+    black_pegs, white_pegs = mesure_black_and_white_pegs(individual, solution)
+
     # Valor mínimo si no hay aciertos
     no_pegs = 1 if black_pegs == 0 and white_pegs == 0 else 0
 
-    return black_pegs * BLACK_PEG_VALUE + white_pegs * WHITE_PEG_VALUE + no_pegs
-
+    individual_fitness = black_pegs * BLACK_PEG_VALUE + white_pegs * WHITE_PEG_VALUE + no_pegs
+    return individual_fitness
 
 # ==================== FITNESS POBLACIÓN ==================== #
 
@@ -45,4 +51,3 @@ def mesure_population_fitness(population, solution):
         (individual, mesure_individual_fitness(individual, solution))
         for individual in population
     ]
-
