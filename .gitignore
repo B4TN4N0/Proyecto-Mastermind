@@ -1,2 +1,6 @@
 # IGNORAR EL ENTORNO VIRTUAL
 .venv/
+#IGNORAR EL .VSCODE
+.vscode/
+uv.lock
+.vscode/settings.json
